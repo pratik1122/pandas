@@ -275,28 +275,43 @@ print(p2.head(3))
 
 
 
+print(p1['sports'].str.upper())
+
+print(p1['sports'].str.title())
+
+print(p1['sports'].str.len())
+
+print(p1['sports'].str.replace('e','k'))
+
+print(p1['sports'].str.contains('cri'))
 
 
+print(p1['sports'].str.startswith('cri'))
 
 
+print(p1['sports'].str.endswith('cri'))
+
+print(p1['sports'].str.strip())
 
 
+print(p1['sports'].str.lstrip())
 
 
+print(p1['sports'].str.rstrip())
+p1['sports'] = p1['sports'].str.upper()
 
 
+##########  string methods on index and columns  ##########3
+
+p1.columns = p1.columns.str.upper()
+print(p1.head())
+
+p1.columns = p1.columns.str.lower()
+print(p1.head())
+
+p1['sports1'] = p1['sports'].str.split(',')
+
+print(p1.head())
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+p1.sport
