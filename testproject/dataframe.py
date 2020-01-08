@@ -3,8 +3,6 @@ import pandas as pd
 
 p1 = pd.read_csv('exams.csv',index_col= 'gender')
 
-
-
 print(p1.head(1))
 print(p1.tail(1))
 print(p1.index)
@@ -41,9 +39,11 @@ print(p1[ ['math score','reading score'] ])
 
 print(p1[ ['math score','reading score'] ].sort_values(by =['math score'],ascending= True).head(7))
 
+
 # ADD NEW COLUMN
 
 p1['sports'] = 'cricket'
+
 
 #ADD NEW COLUMN IN PURTICULAR POSITION
 
@@ -71,7 +71,7 @@ print(p1.tail())
 
 
 #  DELETE ROW WITH NULL VALUES
-#
+#mana
 # p1.dropna() # deletes rows any single null values
 #
 # p1.dropna(how = all) # deletes only rows with all null values)
@@ -134,7 +134,6 @@ print(p1['math score'].rank(ascending = False).astype('int').head())
 
                                                                                 #  date time object
 
-
 print(p1.head(20))
 
 
@@ -146,7 +145,6 @@ mask2 = p1['lunch'] == 'standard'
 mask3 = p1['reading score'] >50
 
 print(p1[(mask1 & mask3)| mask2 ].tail(20))
-
 
 
 # isin method
@@ -162,6 +160,7 @@ print(p1[maskn])
 
 masknn = p1['lunch'].notnull()
 print(p1[masknn].head())
+
 
 
 # between method
@@ -188,7 +187,6 @@ print(p1['physics score'].unique())
 ########################################     DATAFRAME3  ##########################################333
 
 
-
 # .set_index and reset_index methods
 
 
@@ -204,14 +202,12 @@ print(p1.head())
 print(p1.reset_index(inplace = True))
 print(p1)
 
+
 p1.set_index('gender',inplace = True)
 print(p1)
 
 
-
 # loc method   for locating object but it should be an index object
-
-
 
 
 p1.reset_index(inplace = True)
@@ -233,8 +229,8 @@ print(p1.ix[[10,21,25],['math score','physics score']])
 p1.ix[ 10,['math score','physics score']]=[88,89]
 print(p1.ix[10])
 
-# rename and rename index columns
 
+# rename and rename index columns
 
 p1.rename(columns = {'math score':'maths score'},inplace= True)
 print(p1.head())
@@ -311,7 +307,5 @@ print(p1.head())
 
 p1['sports1'] = p1['sports'].str.split(',')
 
-print(p1.head())
+#multiindex  module
 
-
-p1.sport
