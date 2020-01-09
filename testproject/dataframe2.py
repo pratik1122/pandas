@@ -274,7 +274,6 @@ print(m)
 
 import matplotlib.pyplot as plt
 
-print(m.plt.show())
 
 
 

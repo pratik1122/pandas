@@ -187,7 +187,9 @@ print(p1['physics score'].unique())
 
 # .set_index and reset_index methods
 p1.reset_index(inplace = True)
-print(p1)                                   ### first reset index  to numbers abd the assign any colun to index
+print(p1)
+
+### first reset index  to numbers abd the assign any colun to index
 
 
 
