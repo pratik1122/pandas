@@ -62,6 +62,7 @@ p1.insert(2,column='physics score',value =p1['math score'] /2)
 print(p1.head(7))
 
 
+
 #   .value_counts() method
 
 print(p1['lunch'].value_counts().head(1))  # means number of repetitions
@@ -129,7 +130,6 @@ print(p1['math score'].rank(ascending = False).astype('int').head())
 #
 #
 # print(p1.head())
-#
 
 
                                                                                 #  date time object
@@ -162,7 +162,6 @@ masknn = p1['lunch'].notnull()
 print(p1[masknn].head())
 
 
-
 # between method
 
 tomb = p1['math score'].between(40,70)
@@ -186,10 +185,7 @@ print(p1['physics score'].unique())
 
 ########################################     DATAFRAME3  ##########################################333
 
-
 # .set_index and reset_index methods
-
-
 p1.reset_index(inplace = True)
 print(p1)                                   ### first reset index  to numbers abd the assign any colun to index
 
@@ -295,6 +291,7 @@ print(p1['sports'].str.lstrip())
 
 print(p1['sports'].str.rstrip())
 p1['sports'] = p1['sports'].str.upper()
+
 
 
 ##########  string methods on index and columns  ##########3

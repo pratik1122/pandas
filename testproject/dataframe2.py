@@ -233,10 +233,6 @@ import pandas_datareader.data as web
 
 
 #print(dt.datetime(before ='2011/2/1',after = '2011/9/10'))
-#
-#
-# ndata = web.DataReader(name ='GOOG', data_source='google', start = dt.date(2000,1,2),end = dt.date(2019,2,12))
-# print(ndata)
 
 
                                               ########         PANDAS DATE READER  NNNNNNNNNNNNNNNNNNNNNNN
@@ -251,13 +247,34 @@ print(timeB-timeA)
 print(pd.Timedelta(weeks=3,days=8))
 
 
+
 # timedeltas in datasets
 
+#                               DATA READER
+
+import pandas as pd
+import pandas_datareader as dr
+
+#import mathplotlib
+
+m =  dr.data.get_data_yahoo('ibm',start ='2011/1/2',end = '2012/2/4')
+print(m)
 
 
-#  PANEL OBJECT IN DATAFRAME
 
+print(m.head())
+print(m.axes)
+print(m.items)
+print(m.ndim)
+print(m.size)
+#print(m.major_axis)
+print(m['Volume'].head())
+# use bracket Notation
+print(m)
 
+import matplotlib.pyplot as plt
+
+print(m.plt.show())
 
 
 
